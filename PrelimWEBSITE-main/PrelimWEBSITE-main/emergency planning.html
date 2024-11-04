@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="emergency planning.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My App Bar</title>
+</head>
+<body>
+  <header>
+    <div class="app-bar">
+      <a href="mainpage.html">
+        <div><img src="assets/aid.png" alt="Logo"></div>
+      </a>
+      <nav>
+        <button class="nav-btn emergency-planning"onclick="window.location.href='emergency planning.html';">Emergency Planning</button>    
+        <button class="nav-btn disaster-management"onclick="window.location.href='disaster management.html';">Disaster Management</button>
+        <button class="nav-btn resources" onclick="window.location.href='resources.html';">Resources</button>
+        <button class="nav-btn charity-programs" onclick="window.location.href='charity.html';">Charity Programs</button>
+        <button class="nav-btnn new-button" onclick="window.location.href='../PrelimWEBSITE-main/donations.php';">Send Donations</button>
+      </nav>
+      
+    </div>
+  </header>
+  <script>
+    function loadContent(contentId) {
+      // Hide all content
+      document.querySelectorAll('.content-section').forEach(section => {
+        section.style.display = 'none';
+      });
+      // Show selected content
+      document.getElementById(contentId).style.display = 'block';
+    }
+  </script>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul>
+        <li><button onclick="loadContent('why-planning')">Why Emergency Planning Matters</button></li>
+        <li><button onclick="loadContent('emergency-kit')">Emergency Kit</button></li>
+        <li><button onclick="loadContent('make-a-plan')">Make a Plan</button></li>
+        <li><button onclick="loadContent('step-by-step-guides')">Step-by-Step Guides</button></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+            <!-- Why Emergency Planning Matters -->
+            <div id="why-planning" class="content-section" style="display: block;">
+                <h3>Why Emergency Planning Matters</h3>
+                <img src="https://media.istockphoto.com/id/1328295373/photo/mother-explaining-to-her-family-the-emergency-assembly-point.jpg?s=612x612&w=0&k=20&c=daWM7NOmCoiOyX-azNx2RpuWmE5tGvMiIgq-SYJcecA=">
+                <p>
+                  In an unpredictable world where emergencies can strike at any moment, having a well-thought-out emergency plan is crucial for ensuring the safety and well-being of yourself and your loved ones. Emergency planning involves preparing for various scenarios, ranging from natural disasters like earthquakes, floods, and hurricanes, to man-made emergencies such as fires, chemical spills, or power outages. It serves as a proactive approach to minimize the risks and impacts associated with these events.
+                </p>
+                <p>
+                  Emergency planning helps to create a sense of security and confidence. Knowing that you are prepared and have a plan in place can alleviate anxiety and stress, allowing you to focus on executing the plan effectively when needed. It also fosters a culture of safety and resilience within communities, workplaces, and homes, encouraging everyone to take responsibility for their own preparedness and that of those around them.
+                </p>
+                <ul></ul>
+                  <li><strong>Plan Ahead:</strong> Develop a comprehensive emergency plan that includes evacuation routes, emergency contacts, and roles for each family member or employee.</li>
+                  <li><strong>Stay Informed:</strong> Keep updated with the latest news and information regarding potential threats and emergencies.</li>
+                  <li><strong>Practice Regular Drills:</strong> Conduct regular practice drills to ensure everyone is familiar with the emergency procedures and can act swiftly when needed.</li>
+                  <li><strong>Review and Update:</strong> Regularly review and update your emergency plan to account for changes in your circumstances or new information about potential risks.</li>
+                </ul>
+              </div>
+
+
+              <div id="emergency-kit" class="content-section" style="display: none;">
+                <h3>Emergency Kit</h3>
+                <img src="https://crisiscenter.be/sites/default/files/styles/node_banner/public/collection-items/images/2021-04/noodpakket.jpg?h=5dabf909&itok=sKa0Y7aq">
+                <p>
+                  An emergency kit contains essential items needed to survive for several days if normal resources are unavailable.
+                  <ul>
+                    <li><input="water"> <label for="water">Water (1 gallon per person per day for 3 days)</label></li>
+                    <li><input="food"> <label for="food">Non-perishable food for 3 days</label></li>
+                    <li><input="flashlight"> <label for="flashlight">Flashlight and extra batteries</label></li>
+                    <li><input="first-aid"> <label for="first-aid">First-aid supplies</label></li>
+                    <li><input="hygiene"> <label for="hygiene">Personal hygiene products</label></li>
+                  </ul>
+          
+                  
+                  <h4>Additional Emergency Supplies</h4>
+                  <ul>
+                    <li><input="whistle"> <label for="whistle">Whistle to signal for help</label></li>
+                    <li><input="multi-tool"> <label for="multi-tool">Multi-tool or Swiss Army knife</label></li>
+                    <li><input="blankets"> <label for="blankets">Blankets or sleeping bags</label></li>
+                    <li><input="mask"> <label for="mask">N95 mask or similar</label></li>
+                    <li><input="charger"> <label for="charger">Solar or hand-crank charger for devices</label></li>
+                  </ul>
+                </p>
+              </div>
+        
+
+              <div class="make-a-plan">
+                <div id="make-a-plan" class="content-section" style="display: none;">
+                    <h2>Make an Emergency Plan</h2>
+                    <div class="plan-steps">
+                        <button class="step-btn active" onclick="showStep(1)">Step 1</button>
+                        <button class="step-btn" onclick="showStep(2)">Step 2</button>
+                        <button class="step-btn" onclick="showStep(3)">Step 3</button>
+                        <button class="step-btn" onclick="showStep(4)">Step 4</button>
+                        <button class="step-btn" onclick="showStep(5)">Step 5</button>
+                        <button class="step-btn" onclick="showStep(6)">Step 6</button>
+
+                    </div>
+            
+                    <!-- Existing Steps -->
+                    <div class="step-content" id="step-1">
+                        <h3>Step 1 - Identify Escape Routes</h3>
+                        <p>Plan emergency exits from each room of your home...</p>
+                        <label for="room-escape">Escape route from room:</label>
+                        <textarea id="room-escape" rows="3"></textarea>
+                        <label for="neighborhood-escape">Escape route from neighborhood:</label>
+                        <textarea id="neighborhood-escape" rows="3"></textarea>
+                    </div>
+            
+                    <div class="step-content" id="step-2" style="display: none;">
+                        <h3>Step 2 - Choose Meeting Places</h3>
+                        <p>Decide where your family will meet during an emergency...</p>
+                        <label for="meeting-indoor">Indoor meeting place:</label>
+                        <textarea id="meeting-indoor" rows="3"></textarea>
+                        <label for="meeting-outdoor">Outdoor meeting place:</label>
+                        <textarea id="meeting-outdoor" rows="3"></textarea>
+                    </div>
+            
+                    <div class="step-content" id="step-3" style="display: none;">
+                        <h3>Step 3 - Plan for Children</h3>
+                        <p>If an emergency occurs during school hours, you may need someone else to pick up your children from daycare or school. Make sure the school or daycare has up-to-date contact information for both yourself and other adults whom you have authorized on the pick-up list.</p>
+                        <label for="no-children">
+                            <input type="checkbox" id="no-children"> I don't have children
+                        </label><br><br>
+                        <label for="health-information">Health Information:</label>
+                        <textarea id="health-information" rows="3"></textarea>
+                    </div>
+            
+                    <div class="step-content" id="step-4" style="display: none;">
+                        <h3>Step 4 - Address Any Special Health Needs</h3>
+                        <p>Safety tip: Establish a support network of friends, relatives, health-care providers, co-workers, and neighbors who understand your special needs.</p>
+                        <label for="medications">Health Information:</label>
+                        <textarea id="medications" rows="3" placeholder="Medications and medical equipment..."></textarea>
+                        <label for="emergency-kit-location">Identify a location for your emergency kit:</label>
+                        <textarea id="emergency-kit-location" rows="2"></textarea>
+                    </div>
+            
+                    <div class="step-content" id="step-5" style="display: none;">
+                        <h3>Step 5 - Plan for Pets</h3>
+                        <p>Now that you have made emergency plans for your family and friends, don't forget about your pets.</p>
+                        <label for="no-pets">
+                            <input type="checkbox" id="no-pets"> I don't have pets
+                        </label><br><br>
+                        <label for="pet-location">Location for pet during an emergency:</label>
+                        <textarea id="pet-location" rows="2"></textarea>
+                    </div>
+            
+                    <div class="step-content" id="step-6" style="display: none;">
+                        <h3>Step 6 - Record Emergency Contact Information</h3>
+                        <p>Remember, your family may not be together when a disaster occurs. Plan how to meet or contact one another.</p>
+                        <label for="fire">Fire:</label>
+                        <input type="text" id="fire"><br>
+                        <label for="police">Police:</label>
+                        <input type="text" id="police"><br>
+                        <label for="ambulance">Ambulance:</label>
+                        <input type="text" id="ambulance"><br>
+                        <label for="other">Other:</label>
+                        <input type="text" id="other"><br>
+                        <!-- Other fields... -->
+                    </div>
+            
+                    <div class="button-container">
+                        <button onclick="showStep(5)">Previous</button>
+                        <button onclick="showStep(6)">Next</button>
+                        <button id="save-btn" onclick="saveData()">Save</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                function showStep(stepNumber) {
+                    document.querySelectorAll('.step-content').forEach(content => content.style.display = 'none');
+                    document.getElementById(`step-${stepNumber}`).style.display = 'block';
+                    
+                    document.querySelectorAll('.step-btn').forEach(btn => btn.classList.remove('active'));
+                    document.querySelector(`.step-btn:nth-child(${stepNumber})`).classList.add('active');
+            
+                    loadData(); // Load data whenever a step is shown
+                }
+            
+                function saveData() {
+                    const data = {
+                        roomEscape: document.getElementById('room-escape').value,
+                        neighborhoodEscape: document.getElementById('neighborhood-escape').value,
+                        meetingIndoor: document.getElementById('meeting-indoor').value,
+                        meetingOutdoor: document.getElementById('meeting-outdoor').value,
+                        noChildren: document.getElementById('no-children').checked,
+                        healthInformation: document.getElementById('health-information').value,
+                        medications: document.getElementById('medications').value,
+                        emergencyKitLocation: document.getElementById('emergency-kit-location').value,
+                        noPets: document.getElementById('no-pets').checked,
+                        petLocation: document.getElementById('pet-location').value,
+                        fire: document.getElementById('fire').value,
+                        police: document.getElementById('police').value,
+                        ambulance: document.getElementById('ambulance').value,
+                        other: document.getElementById('other').value
+                        // Add more fields as needed
+                    };
+            
+                    localStorage.setItem('emergencyPlan', JSON.stringify(data));
+                    alert('Your data has been saved!');
+                }
+            
+                function loadData() {
+                    const data = JSON.parse(localStorage.getItem('emergencyPlan'));
+                    if (data) {
+                        document.getElementById('room-escape').value = data.roomEscape || '';
+                        document.getElementById('neighborhood-escape').value = data.neighborhoodEscape || '';
+                        document.getElementById('meeting-indoor').value = data.meetingIndoor || '';
+                        document.getElementById('meeting-outdoor').value = data.meetingOutdoor || '';
+                        document.getElementById('no-children').checked = data.noChildren || false;
+                        document.getElementById('health-information').value = data.healthInformation || '';
+                        document.getElementById('medications').value = data.medications || '';
+                        document.getElementById('emergency-kit-location').value = data.emergencyKitLocation || '';
+                        document.getElementById('no-pets').checked = data.noPets || false;
+                        document.getElementById('pet-location').value = data.petLocation || '';
+                        document.getElementById('fire').value = data.fire || '';
+                        document.getElementById('police').value = data.police || '';
+                        document.getElementById('ambulance').value = data.ambulance || '';
+                        document.getElementById('other').value = data.other || '';
+                        // Load more fields as needed
+                    }
+                }
+            </script>
+            
+              <div id="step-by-step-guides" class="content-section" style="display: none;">
+                <h3>Step-by-Step Guides for Emergency Plans</h3>
+                <img src="https://workplaceemergencymanagement.com.au/wp-content/uploads/2019/05/emergency-evacuation-plans.jpg">
+                <p>
+                  Here are step-by-step guides for preparing emergency plans for different environments:
+                  <h4>Home Emergency Plan</h4>
+                  <ul>
+                    <li>Create a family meeting place.</li>
+                    <li>Assign emergency tasks to family members.</li>
+                    <li>Identify safe areas in your home.</li>
+                    <li>Plan for pets and special needs family members.</li>
+                  </ul>
+
+                  <h4>Workplace Emergency Plan</h4>
+                  <ul>
+                    <li>Designate evacuation leaders and meeting points.</li>
+                    <li>Practice emergency drills regularly.</li>
+                    <li>Ensure access to fire extinguishers and first-aid kits.</li>
+                    <li>Prepare for possible lockdown situations.</li>
+                  </ul>
+                  
+                  <h4>Community Emergency Plan</h4>
+                  <ul>
+                    <li>Set up communication systems like community alert apps.</li>
+                    <li>Organize community drills and training.</li>
+                    <li>Identify shelters or safe locations for mass evacuation.</li>
+                    <li>Work with local authorities to ensure a coordinated response.</li>
+                  </ul>
+                </p>
+                <p>
+                    <div class="pdf-container">
+                      <h2>Guides Plans</h2>
+                      <div class="pdf-links">
+                        <a href="https://www.llrprepared.org.uk/wp-content/themes/LLRP/docs/Household-Emergency-Plan-Toolkit.pdf" target="_blank">Home Emergency Plan</a>
+                        <a href="https://www.osha.gov/sites/default/files/publications/osha3088.pdf" target="_blank">Workplace Emergency Plan</a>
+                        <a href="https://assets.publishing.service.gov.uk/media/5a74fe7be5274a59fa71692d/community_emergency_plan_toolkit.pdf" target="_blank">Community Emergency Plan</a>
+                      </p>
+                      </div>
+  
+

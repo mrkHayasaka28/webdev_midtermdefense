@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #feffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    background-color: #fff;
+    max-width: 600px; /* Increase wrapper width */
+    padding: 30px;
+    margin: 25px auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.wrapper h2 {
+    background-color: #fcfcfc;
+    color: #B14749;
+    font-size: 26px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 1px dashed #B14749;
+}
+
+.wrapper h4 {
+    padding-bottom: 5px;
+    color: #B14749;
+    font-size: 18px;
+}
+
+.input_group {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 15px; /* Add gap between inputs */
+    flex-wrap: wrap; /* Allow wrapping to next line on smaller screens */
+}
+
+.input_box {
+    flex: 1;
+    position: relative;
+    min-width: 220px; /* Ensure boxes are wider */
+}
+
+.input_box .name, .dob {
+    padding: 18px 15px 18px 55px; /* Increase padding for readability */
+    width: 100%;
+    font-size: 16px; /* Larger font size */
+    background-color: #fcfcfc;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+    border-radius: 5px;
+    color: #333;
+}
+
+.input_box .name:focus, .dob:focus {
+    box-shadow: 0 0 4px #B14749;
+    border-color: #B14749;
+}
+
+.input_box .icon {
+    width: 48px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #333;
+    background-color: #f1f1f1;
+    border-radius: 5px 0 0 5px;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.name:focus + .icon {
+    background-color: #B14749;
+    color: #fff;
+}
+
+.dob {
+    width: 32%;
+    padding: 16px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.radio {
+    display: none;
+}
+
+.input_box label {
+    width: 48%;
+    padding: 16px;
+    font-size: 16px;
+    background-color: #fcfcfc;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.radio:checked + label {
+    background-color: #B14749;
+    color: #fff;
+}
+
+.input_box button {
+    width: 100%;
+    background-color: #B14749;
+    border: none;
+    color: #fff;
+    padding: 18px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.input_box button:hover {
+    cursor: pointer;
+    background-color: #a23a3e;
+}
+/* Resetting margins and paddings for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-color: #f7f7f7; /* Light background for contrast */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.receipts {
+    border: 1px solid #4CAF50;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.receipt-details p {
+    margin: 5px 0;
+}

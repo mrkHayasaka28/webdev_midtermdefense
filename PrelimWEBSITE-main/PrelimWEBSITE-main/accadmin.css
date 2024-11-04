@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex; /* Add this to center the container */
+    justify-content: center; /* Add this to center the container */
+    align-items: center; /* Add this to center the container */
+    height: 100vh; /* Add this to make the body full height */
+}
+
+.container {
+    border-radius: 10px;
+    height: 1100px;
+    width: 60%;
+    margin: 40px auto;
+    background-color: #F5F7F8;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Add this to center the forms vertically */
+    flex-direction: column; /* Add this to stack the forms vertically */
+    justify-content: center; /* Add this to center the forms vertically */
+    align-items: center; /* Add this to center the forms horizontally */
+}
+
+.register-form, .login-form {
+    font-size: 18px;
+    font-family: 'UbuntuBold';
+    width: 50%;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="email"], input[type="password"], input[type="text"], input[type="number"], input[type="date"] {
+    font-family: 'UbuntuReg';
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 24px;
+}
+
+input[type="submit"] {
+    font-size: 18px;
+    font-family: 'UbuntuReg';
+    width: 100%;
+    height: 40px;
+    background-color: #B14749;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    
+    background-color: #AC282E;
+}
+
+@font-face {
+    font-family: 'UbuntuReg'; 
+    src: url('fonts/Ubuntu-Regular.ttf'); 
+}
+
+@font-face {
+    font-family: 'UbuntuBold'; 
+    src: url('fonts/Ubuntu-Bold.ttf'); 
+}
+img {
+    display: block;
+    margin: 0 auto;
+}

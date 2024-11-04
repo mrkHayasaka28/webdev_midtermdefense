@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disaster Management</title>
+  <link rel="stylesheet" href="disaster management.css">
+</head>
+<body>
+  <header>
+    <div class="app-bar">
+      <a href="mainpage.html">
+        <div><img src="assets/aid.png" alt="Logo"></div>
+      </a>
+      <nav>
+        <button class="nav-btn emergency-planning"onclick="window.location.href='emergency planning.html';">Emergency Planning</button>    
+        <button class="nav-btn disaster-management"onclick="window.location.href='disaster management.html';">Disaster Management</button>
+        <button class="nav-btn resources" onclick="window.location.href='resources.html';">Resources</button>
+        <button class="nav-btn charity-programs" onclick="window.location.href='charity.html';">Charity Programs</button>
+        <button class="nav-btnn new-button" onclick="window.location.href='../PrelimWEBSITE-main/donations.php';">Send Donations</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <ul>
+        <li><button onclick="loadContent('drought')">Drought</button></li>
+        <li><button onclick="loadContent('earthquake')">Earthquake</button></li>
+        <li><button onclick="loadContent('fire')">Fire</button></li>
+        <li><button onclick="loadContent('flood')">Flood</button></li>
+        <li><button onclick="loadContent('industrial-accidents')">Industrial Accidents</button></li>
+        <li><button onclick="loadContent('tsunami')">Tsunami</button></li>
+        <li><button onclick="loadContent('typhoon')">Typhoon</button></li>
+        <li><button onclick="loadContent('volcanic-eruption')">Volcanic Eruption</button></li>
+      </ul>
+    </div>
+
+    <div class="main-content" id="content">
+      <h1 class="fade-in">Welcome to Disaster Management</h1>
+      <img src="https://media.cnn.com/api/v1/images/stellar/prod/230413065751-iyw-racial-disparities-disaster-1.jpg?c=16x9&q=h_833,w_1480,c_fill">
+            <p class="slide-in">Disaster management is more than just a process; it’s a lifeline for communities facing the unpredictable challenges posed by both natural and man-made disasters. At its core, it embodies our collective responsibility to safeguard the lives and well-being of those around us.</p>
+            <p class="slide-in delay">Every year, countless lives are affected by disasters—whether it’s a sudden earthquake, a devastating flood, or the aftermath of an industrial accident. In these critical moments, disaster management steps in as a beacon of hope, guiding us through preparation, response, recovery, and mitigation.</p>
+            <p class="slide-in delay">Effective disaster management involves planning, coordination, and the allocation of resources to ensure that communities can withstand and quickly recover from crises.</p>
+            <p class="slide-in delay">Join us as we explore the key components, challenges, and best practices in disaster management that can help save lives and enhance resilience.</p>
+           
+            <div class="contact-section">
+              <h2>Contact Us</h2>
+              <div class="contact-container">
+                <div class="contact-info">
+                  <p><strong>Phone:</strong> +123 456 7890</p>
+                  <p><strong>Email:</strong> contact@charity.org</p>
+                  <p><strong>Address:</strong> 123 Charity Lane, Goodville, GV 12345</p>
+                </div>
+                <div class="contact-social">
+                  <p><strong>Follow Us:</strong></p>
+                  <a href="https://www.facebook.com/charity" class="contact-link">Facebook</a> |
+                  <a href="https://twitter.com/charity" class="contact-link">Twitter</a> |
+                  <a href="https://www.instagram.com/charity" class="contact-link">Instagram</a>
+                </div>
+              </div>
+            </div>
+
+  <script>
+    function loadContent(type) {
+      const content = document.getElementById('content');
+      let htmlContent = '';
+
+      switch (type) {
+        case 'drought':
+          htmlContent = `
+            <h2>Drought</h2>
+            <img src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_related_resources/v1638884752/EducationHub/photos/big-dry.jpg" alt="Drought">
+            <h3>What to Do BEFORE a Drought</h3>
+            <ul>
+              <li class="en">Conserve water. Avoid using water unnecessarily.</li>
+              <li class="en">Store water in containers to last during the drought.</li>
+              <li class="en">Avoid outdoor water use, such as watering lawns or washing cars.</li>
+              <li class="en">Fix leaks immediately to prevent water wastage.</li>
+              <li class="en">Stay informed about local drought alerts and regulations.</li>
+            </ul>
+            <h3>What to Do DURING a Drought</h3>
+            <ul>
+              <li class="en">Follow water conservation orders and restrictions.</li>
+              <li class="en">Minimize outdoor water use (e.g., avoid watering lawns).</li>
+              <li class="en">Reuse water when possible (e.g., gray water for gardening).</li>
+            </ul>
+            <h3>What to Do AFTER a Drought</h3>
+            <ul>
+              <li class="en">Continue conserving water to replenish local supplies.</li>
+              <li class="en">Help assess and restore affected ecosystems.</li>
+            </ul>`;
+          break;
+        case 'earthquake':
+          htmlContent = `
+            <h2>Earthquake</h2>
+            <img src="https://gdb.voanews.com/bcb4d045-fd8a-44fc-b9cb-5667f48cb850_w1200_r1.jpg" alt="Earthquake">
+            <h3>What to Do BEFORE an Earthquake</h3>
+            <ul>
+              <li class="en">Drop, cover, and hold on until the shaking stops.</li>
+              <li class="en">If indoors, stay away from windows and exterior walls.</li>
+              <li class="en">If outdoors, move to an open area away from buildings and power lines.</li>
+              <li class="en">After the shaking, check for injuries and hazards like gas leaks or fires.</li>
+              <li class="en">Be prepared for aftershocks.</li>
+            </ul>
+            <h3>What to Do DURING an Earthquake</h3>
+            <ul>
+              <li class="en">Drop, cover, and hold on under a sturdy piece of furniture.</li>
+              <li class="en">Stay away from windows, glass, and heavy objects.</li>
+              <li class="en">If outdoors, move to an open area away from buildings.</li>
+            </ul>
+            <h3>What to Do AFTER an Earthquake</h3>
+            <ul>
+              <li class="en">Check yourself and others for injuries.</li>
+              <li class="en">Be prepared for aftershocks.</li>
+              <li class="en">Avoid using matches or lighters in case of gas leaks.</li>
+            </ul>`;
+          break;
+        case 'fire':
+          htmlContent = `
+            <h2>Fire</h2>
+            <img src="https://d.ibtimes.co.uk/en/full/1416969/manila-fire.jpg" alt="Fire">
+            <h3>What to Do BEFORE a Fire</h3>
+            <ul>
+              <li class="en">Install smoke alarms on every level of your home.</li>
+              <li class="en">Plan and practice a home fire escape route.</li>
+              <li class="en">Keep fire extinguishers readily available.</li>
+            </ul>
+            <h3>What to Do DURING a Fire</h3>
+            <ul>
+              <li class="en">Get out immediately if there is a fire in your home.</li>
+              <li class="en">Crawl low under the smoke to exit.</li>
+              <li class="en">Call 911 after you have safely exited.</li>
+            </ul>
+            <h3>What to Do AFTER a Fire</h3>
+            <ul>
+              <li class="en">Do not enter your home until authorities say it is safe.</li>
+              <li class="en">Contact your insurance provider for damage claims.</li>
+              <li class="en">Have professionals inspect the property before returning.</li>
+            </ul>`;
+          break;
+        case 'flood':
+          htmlContent = `
+            <h2>Flood</h2>
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2163358479.jpg?c=16x9&q=h_833,w_1480,c_fill" alt="Flood">
+            <h3>What to Do BEFORE a Flood</h3>
+            <ul>
+              <li class="en">Know if you live in a flood-prone area.</li>
+              <li class="en">Store important documents in a waterproof container.</li>
+              <li class="en">Have an evacuation plan ready.</li>
+            </ul>
+            <h3>What to Do DURING a Flood</h3>
+            <ul>
+              <li class="en">Evacuate if authorities issue an order.</li>
+              <li class="en">Avoid walking or driving through floodwaters.</li>
+              <li class="en">Move to higher ground.</li>
+            </ul>
+            <h3>What to Do AFTER a Flood</h3>
+            <ul>
+              <li class="en">Wait for authorities to declare the area safe before returning.</li>
+              <li class="en">Beware of contaminated water and debris.</li>
+              <li class="en">Take photos of any damage for insurance claims.</li>
+            </ul>`;
+          break;
+        // Add other disaster cases here
+        case 'industrial-accidents':
+          htmlContent = `
+            <h2>Industrial Accidents</h2>
+            <img src="https://files01.pna.gov.ph/ograph/2022/10/04/qc-construction-accident-1.jpg" alt="Industrial Accident">
+            <h3>What to Do BEFORE an Industrial Accident</h3>
+            <ul>
+              <li>Know emergency procedures for the industrial facility.</li>
+              <li>Familiarize yourself with evacuation routes.</li>
+              <li>Ensure the availability of protective gear (masks, gloves).</li>
+            </ul>
+            <h3>What to Do DURING an Industrial Accident</h3>
+            <ul>
+              <li>Evacuate the area immediately if told to do so.</li>
+              <li>Avoid breathing in fumes or coming into contact with hazardous substances.</li>
+              <li>Listen to emergency alerts for updates.</li>
+            </ul>
+            <h3>What to Do AFTER an Industrial Accident</h3>
+            <ul>
+              <li>Avoid re-entering the area until it's deemed safe.</li>
+              <li>Seek medical attention if exposed to harmful materials.</li>
+              <li>Follow clean-up guidelines from local authorities.</li>
+            </ul>`;
+          break;
+          case 'tsunami':
+          htmlContent = `
+            <h2>Tsunami</h2>
+            <img src="https://dims.apnews.com/dims4/default/c1e9c81/2147483647/strip/true/crop/3000x2001+0+0/resize/599x400!/quality/90/?url=https%3A%2F%2Fstorage.googleapis.com%2Fafs-prod%2Fmedia%2F0b5774a77bee45598c2684d01ec3ef79%2F3000.jpeg" alt="Tsunami">
+            <h3>What to Do BEFORE a Tsunami</h3>
+            <ul>
+              <li>Know if you live in a tsunami hazard zone.</li>
+              <li>Have an evacuation plan and route ready.</li>
+              <li>Pay attention to tsunami alerts and warnings.</li>
+            </ul>
+            <h3>What to Do DURING a Tsunami</h3>
+            <ul>
+              <li>Immediately move to higher ground or inland.</li>
+              <li>Avoid the coast and low-lying areas.</li>
+              <li>Do not return to the shore until authorities say it's safe.</li>
+            </ul>
+            <h3>What to Do AFTER a Tsunami</h3>
+            <ul>
+              <li>Stay away from floodwaters and debris.</li>
+              <li>Help with search and rescue efforts if it's safe to do so.</li>
+              <li>Document any damage for insurance claims.</li>
+            </ul>`;
+          break;
+          case 'typhoon':
+          htmlContent = `
+            <h2>Typhoon</h2>
+            <img src="https://www.aljazeera.com/wp-content/uploads/2024/07/AFP__20240724__364U3AK__v1__Preview__PhilippinesWeatherTyphoon-1721798033.jpg?resize=1170%2C780&quality=80" alt="Typhoon">
+            <h3>What to Do BEFORE a Typhoon</h3>
+            <ul>
+              <li>Secure outdoor objects that could become projectiles.</li>
+              <li>Stock up on emergency supplies, such as water and food.</li>
+              <li>Know evacuation routes and shelter locations.</li>
+            </ul>
+            <h3>What to Do DURING a Typhoon</h3>
+            <ul>
+              <li>Stay indoors and away from windows.</li>
+              <li>Monitor weather updates from authorities.</li>
+              <li>Be ready to evacuate if ordered to do so.</li>
+            </ul>
+            <h3>What to Do AFTER a Typhoon</h3>
+            <ul>
+              <li>Avoid floodwaters and fallen power lines.</li>
+              <li>Help neighbors and community members if it's safe.</li>
+              <li>Assess and report damage to your property.</li>
+            </ul>`;
+          break;
+          case 'volcanic-eruption':
+          htmlContent = `
+            <h2>Volcanic Eruption</h2>
+            <img src="https://www.aljazeera.com/wp-content/uploads/2018/01/1d7793cc95cb402c9ace56479894c3b9_8.jpeg?resize=1170%2C780&quality=80" alt="Volcanic Eruption">
+            <h3>What to Do BEFORE a Volcanic Eruption</h3>
+            <ul>
+              <li>Know if you live near an active volcano.</li>
+              <li>Have an evacuation plan and emergency supplies.</li>
+              <li>Prepare a mask to protect against ash inhalation.</li>
+            </ul>
+            <h3>What to Do DURING a Volcanic Eruption</h3>
+            <ul>
+              <li>Evacuate immediately if authorities issue an order.</li>
+              <li>Stay indoors and avoid breathing ash or fumes.</li>
+              <li>Listen for updates from local authorities.</li>
+            </ul>
+            <h3>What to Do AFTER a Volcanic Eruption</h3>
+            <ul>
+              <li>Avoid areas downwind of the eruption site.</li>
+              <li>Help clear ash from roofs and properties safely.</li>
+              <li>Seek medical attention if you experience respiratory issues.</li>
+            </ul>`;
+          break;
+
+
+        default:
+          htmlContent = '<h2>Disaster Management</h2><p>Prepare. Act. Survive.</p>';
+      }
+
+      htmlContent += `
+        <div class="language-buttons">
+          <button onclick="changeLanguage('en')">English</button>
+          <button onclick="changeLanguage('tl')">Tagalog</button>
+        </div>`;
+
+      content.innerHTML = htmlContent;
+    }
+
+    function changeLanguage(lang) {
+      const content = document.getElementById('content');
+      const currentType = content.querySelector('h2').textContent.toLowerCase();
+      let htmlContent = '';
+
+      if (lang === 'tl') {
+        switch (currentType) {
+          case 'drought':
+            htmlContent = `
+              <h2>Drought</h2>
+              <img src="https://images.nationalgeographic.org/image/upload/t_edhub_resource_related_resources/v1638884752/EducationHub/photos/big-dry.jpg" alt="Drought">
+              <h3>Mga Dapat Gawin BAGO ang Tagtuyot</h3>
+              <ul>
+                <li>Magtipid ng tubig. Iwasang gumamit ng tubig nang walang dahilan.</li>
+                <li>Mag-imbak ng tubig sa mga lalagyan upang tumagal sa panahon ng tagtuyot.</li>
+                <li>Iwasan ang paggamit ng tubig sa labas, tulad ng pagdidilig sa mga damuhan o paghuhugas ng mga sasakyan.</li>
+                <li>Ayusin ang mga tagas agad upang maiwasan ang pag-aaksaya ng tubig.</li>
+                <li>Manatiling updated tungkol sa mga lokal na alerto at regulasyon sa tagtuyot.</li>
+              </ul>
+              <h3>Mga Dapat Gawin SA PANAHON ng Tagtuyot</h3>
+              <ul>
+                <li>Sundin ang mga utos at restriksyon sa konserbasyon ng tubig.</li>
+                <li>Minimize ang paggamit ng tubig sa labas (hal. iwasan ang pagdidilig ng mga damuhan).</li>
+                <li>Muling gamitin ang tubig kapag maaari (hal. gray water para sa paghahardin).</li>
+              </ul>
+              <h3>Mga Dapat Gawin PAGKATAPOS ng Tagtuyot</h3>
+              <ul>
+                <li>Magpatuloy sa pagtipid ng tubig upang mapunan ang lokal na suplay.</li>
+                <li>Tumulong sa pagsusuri at pag-aayos ng mga naapektuhang ekosistema.</li>
+              </ul>`;
+            break;
+          case 'earthquake':
+            htmlContent = `
+              <h2>Earthquake</h2>
+              <img src="https://gdb.voanews.com/bcb4d045-fd8a-44fc-b9cb-5667f48cb850_w1200_r1.jpg" alt="Earthquake">
+              <h3>Mga Dapat Gawin BAGO ang Lindol</h3>
+              <ul>
+                <li>Humiga, takpan, at humawak hanggang huminto ang pagyanig.</li>
+                <li>Kung nasa loob, umiwas sa mga bintana at panlabas na pader.</li>
+                <li>Kung nasa labas, lumipat sa isang bukas na lugar na malayo sa mga gusali at linya ng kuryente.</li>
+                <li>Pagkatapos ng pagyanig, tingnan ang mga sugat at panganib tulad ng mga tagas ng gas o apoy.</li>
+                <li>Maghanda para sa mga aftershock.</li>
+              </ul>
+              <h3>Mga Dapat Gawin SA PANAHON ng Lindol</h3>
+              <ul>
+                <li>Humiga, takpan, at humawak sa ilalim ng matibay na muwebles.</li>
+                <li>Umiwas sa mga bintana, salamin, at mabibigat na bagay.</li>
+                <li>Kung nasa labas, lumipat sa isang bukas na lugar malayo sa mga gusali.</li>
+              </ul>
+              <h3>Mga Dapat Gawin PAGKATAPOS ng Lindol</h3>
+              <ul>
+                <li>Surin ang iyong sarili at ang iba para sa mga sugat.</li>
+                <li>Maghanda para sa mga aftershock.</li>
+                <li>Iwasan ang paggamit ng mga posporo o lighter sakaling may tagas ng gas.</li>
+              </ul>`;
+            break;
+          case 'fire':
+            htmlContent = `
+              <h2>Fire</h2>
+              <img src="https://d.ibtimes.co.uk/en/full/1416969/manila-fire.jpg" alt="Fire">
+              <h3>Mga Dapat Gawin BAGO ang Sunog</h3>
+              <ul>
+                <li>Mag-install ng mga smoke alarm sa bawat antas ng iyong tahanan.</li>
+                <li>Magplano at magsanay ng isang ruta sa pagtakas mula sa sunog sa bahay.</li>
+                <li>Panatilihing handa ang mga fire extinguisher.</li>
+              </ul>
+              <h3>Mga Dapat Gawin SA PANAHON ng Sunog</h3>
+              <ul>
+                <li>Umalis kaagad kung may sunog sa iyong tahanan.</li>
+                <li>Gum crawl sa ilalim ng usok upang makalabas.</li>
+                <li>Tumawag ng 911 pagkatapos mong ligtas na makalabas.</li>
+              </ul>
+              <h3>Mga Dapat Gawin PAGKATAPOS ng Sunog</h3>
+              <ul>
+                <li>Huwag pumasok sa iyong tahanan hangga't hindi sinasabi ng mga awtoridad na ito ay ligtas.</li>
+                <li>Kontakin ang iyong insurance provider para sa mga claims ng pinsala.</li>
+                <li>Pahintulutan ang mga propesyonal na suriin ang ari-arian bago bumalik.</li>
+              </ul>`;
+            break;
+          case 'flood':
+            htmlContent = `
+              <h2>Flood</h2>
+              <img src="https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2163358479.jpg?c=16x9&q=h_833,w_1480,c_fill" alt="Flood">
+              <h3>Mga Dapat Gawin BAGO ang Baha</h3>
+              <ul>
+                <li>Alamin kung ikaw ay nakatira sa isang lugar na madaling bahain.</li>
+                <li>Mag-imbak ng mahahalagang dokumento sa isang watertight na lalagyan.</li>
+                <li>Maghanda ng isang plano sa paglikas.</li>
+              </ul>
+              <h3>Mga Dapat Gawin SA PANAHON ng Baha</h3>
+              <ul>
+                <li>Umalis kung may utos mula sa mga awtoridad.</li>
+                <li>Iwasan ang paglalakad o pagmamaneho sa mga bahang tubig.</li>
+                <li>Lumipat sa mas mataas na lugar.</li>
+              </ul>
+              <h3>Mga Dapat Gawin PAGKATAPOS ng Baha</h3>
+              <ul>
+                <li>Maghintay na ideklara ng mga awtoridad na ligtas ang lugar bago bumalik.</li>
+                <li>Mag-ingat sa kontaminadong tubig at mga debris.</li>
+                <li>Kumuha ng mga larawan ng anumang pinsala para sa mga claims ng insurance.</li>
+              </ul>`;
+            break;
+          // Add other disaster cases in Tagalog here
+          case 'industrial accidents':
+            htmlContent = `
+              <h2>Industrial Accidents</h2>
+              <img src="https://files01.pna.gov.ph/ograph/2022/10/04/qc-construction-accident-1.jpg" alt="Industrial Accident">
+              <h3>Mga Dapat Gawin BAGO ang Industrial Accident</h3>
+              <ul>
+                <li>Alamin ang mga emergency procedure ng industrial facility.</li>
+                <li>Familiarize ang iyong sarili sa mga evacuation route.</li>
+                <li>Tiyakin ang availability ng protective gear (masks, gloves).</li>
+              </ul>
+              <h3>Mga Dapat Gawin SA PANAHON ng Industrial Accident</h3>
+              <ul>
+                <li>Agad na i-evacuate ang lugar kung inutos.</li>
+                <li>Iwasan ang paglanghap ng fumes o pakikipag-ugnayan sa mga hazardous substances.</li>
+                <li>Makinig sa mga emergency alerts para sa mga update.</li>
+              </ul>
+              <h3>Mga Dapat Gawin PAGKATAPOS ng Industrial Accident</h3>
+              <ul>
+                <li>Iwasan ang muling pagpasok sa lugar hangga't hindi ito itinuturing na ligtas.</li>
+                <li>Humingi ng medikal na atensyon kung nalantad sa mapanganib na materyales.</li>
+                <li>Sumunod sa mga guidelines ng local authorities para sa paglilinis.</li>
+              </ul>`;
+            break;
+            case 'tsunami':
+            htmlContent = `
+              <h2>Tsunami</h2>
+              <img src="https://dims.apnews.com/dims4/default/c1e9c81/2147483647/strip/true/crop/3000x2001+0+0/resize/599x400!/quality/90/?url=https%3A%2F%2Fstorage.googleapis.com%2Fafs-prod%2Fmedia%2F0b5774a77bee45598c2684d01ec3ef79%2F3000.jpeg" alt="Tsunami">
+              <h3>Mga Dapat Gawin BAGO ang Tsunami</h3>
+              <ul>
+                <li>Alamin kung nakatira ka sa panganib ng tsunami.</li>
+                <li>Magkaroon ng evacuation plan at ruta.</li>
+                <li>Magbigay-pansin sa mga alerto at babala ng tsunami.</li>
+              </ul>
+              <h3>Mga Dapat Gawin SA PANAHON ng Tsunami</h3>
+              <ul>
+                <li>Agad na lumipat sa mas mataas na lupa o inland.</li>
+                <li>Iwasan ang baybayin at mga mabababang lugar.</li>
+                <li>Huwag bumalik sa baybayin hangga't hindi sinasabi ng mga awtoridad na ligtas na.</li>
+              </ul>
+              <h3>Mga Dapat Gawin PAGKATAPOS ng Tsunami</h3>
+              <ul>
+                <li>Manatiling malayo sa mga baha at debris.</li>
+                <li>Tumulong sa paghahanap at pagsagip kung ligtas ito.</li>
+                <li>Dokumentahan ang anumang pinsala para sa mga claim ng insurance.</li>
+              </ul>`;
+            break;
+            case 'typhoon':
+            htmlContent = `
+              <h2>Bagyo</h2>
+              <img src="https://www.aljazeera.com/wp-content/uploads/2024/07/AFP__20240724__364U3AK__v1__Preview__PhilippinesWeatherTyphoon-1721798033.jpg?resize=1170%2C780&quality=80" alt="Bagyo">
+              <h3>Mga Dapat Gawin BAGO ang Bagyo</h3>
+              <ul>
+                <li>Siguraduhing maayos ang mga bagay na maaaring maging proyektil.</li>
+                <li>Mag-imbak ng emergency supplies tulad ng tubig at pagkain.</li>
+                <li>Alamin ang mga evacuation routes at mga lokasyon ng kanlungan.</li>
+              </ul>
+              <h3>Mga Dapat Gawin SA PANAHON ng Bagyo</h3>
+              <ul>
+                <li>Manatili sa loob at iwasan ang mga bintana.</li>
+                <li>Subaybayan ang mga update sa panahon mula sa mga awtoridad.</li>
+                <li>Maghanda upang mag-evacuate kung inutos.</li>
+              </ul>
+              <h3>Mga Dapat Gawin PAGKATAPOS ng Bagyo</h3>
+              <ul>
+                <li>Iwasan ang mga baha at mga nahulog na linya ng kuryente.</li>
+                <li>Tumulong sa mga kapitbahay at mga miyembro ng komunidad kung ligtas ito.</li>
+                <li>Surin at i-report ang pinsala sa iyong ari-arian.</li>
+              </ul>`;
+            break;
+            case 'volcanic eruption':
+            htmlContent = `
+              <h2>Pagputok ng Bulkan</h2>
+              <img src="https://www.aljazeera.com/wp-content/uploads/2018/01/1d7793cc95cb402c9ace56479894c3b9_8.jpeg?resize=1170%2C780&quality=80" alt="Pagputok ng Bulkan">
+              <h3>Mga Dapat Gawin BAGO ang Pagputok ng Bulkan</h3>
+              <ul>
+                <li>Alamin kung nakatira ka malapit sa aktibong bulkan.</li>
+                <li>Magkaroon ng evacuation plan at mga emergency supplies.</li>
+                <li>Maghanda ng maskara upang maprotektahan ang sarili mula sa paglanghap ng abo.</li>
+              </ul>
+              <h3>Mga Dapat Gawin SA PANAHON ng Pagputok ng Bulkan</h3>
+              <ul>
+                <li>Agad na mag-evacuate kung may utos ang mga awtoridad.</li>
+                <li>Manatili sa loob at iwasan ang paglanghap ng abo o fumes.</li>
+                <li>Makinig para sa mga update mula sa mga lokal na awtoridad.</li>
+              </ul>
+              <h3>Mga Dapat Gawin PAGKATAPOS ng Pagputok ng Bulkan</h3>
+              <ul>
+                <li>Iwasan ang mga lugar na nasa ibaba ng lokasyon ng pagputok.</li>
+                <li>Tumulong sa paglilinis ng abo mula sa mga bubong at ari-arian.</li>
+                <li>Humingi ng medikal na atensyon kung nakakaranas ng mga isyu sa paghinga.</li>
+              </ul>`;
+            break;
+          
+          default:
+            htmlContent = '<h2>Disaster Management</h2><p>Prepare. Act. Survive.</p>';
+        }
+      } else {
+        // If the language is English, reload the original content
+        loadContent(currentType);
+        return;
+      }
+
+      htmlContent += `
+        <div class="language-buttons">
+          <button onclick="changeLanguage('en')">English</button>
+          <button onclick="changeLanguage('tl')">Tagalog</button>
+        </div>`;
+
+      content.innerHTML = htmlContent;
+    }
+  </script>
+</body>
+</html>
